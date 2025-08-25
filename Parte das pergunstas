@@ -1,0 +1,110 @@
+Questão 1: Nos conceitos estudados em aula, falamos sobre controller e models. Responda:  
+
+a) Defina o papel de cada um e responda por que ao criarmos nosso controller fizemos uma herança de controllerbase? 
+
+Model → Representa os dados e as regras de negócio. 
+
+Exemplo: Uma classe Pessoa com propriedades Nome, Peso e Altura. 
+
+Controller → Responsável por receber requisições, processar os dados e retornar respostas. 
+
+Exemplo: Um PessoaController que recebe os dados e calcula o IMC. 
+
+Qual o motivo de utilizaçao do controlebase 
+
+  
+Quando criamos um controller no ASP.NET Core, normalmente herdamos de ControllerBase porque: 
+
+Ele fornece métodos úteis como Ok(), BadRequest() e NotFound(). 
+
+Ele suporta APIs REST de forma nativa. 
+
+Ele evita a herança desnecessária de Controller completo (usado para MVC com views), deixando o código mais leve. 
+
+ 
+
+b) Em sala, mostramos que ao abrir um nagevador conseguimos chamar uma rota GET e POST não , explique por que só conseguimos executar a Rota GET no browser. 
+
+Rota GET → Pode ser chamada diretamente digitando a URL no navegador, porque os navegadores enviam requisições GET por padrão. 
+
+Rota POST → Precisa enviar dados no corpo da requisição. Para isso, é necessário usar ferramentas como: 
+
+Postman 
+
+Swagger 
+
+Formulários HTML 
+
+Questão 2: Dadas ações cite o verbo http correto para utilizarmos, considere ações no AVA do uniaraxá:  
+
+a) Criar a aula: POST 
+
+b) Remover um material: DELETE 
+
+c) Listar as disciplinas disponíveis para o professor no semestre: GET 
+
+d) Listas os alunos da disciplina: GET 
+
+e) Atualizar um material: PUT ou PATCH 
+
+f) Lançar uma nota: POST 
+
+Questão 3: Em sala mostramos que ao fazer um return da action utilizamos um Status Http , por exemplo, Ok(), BadRequest(), NotFound() , entre outros. Especifique a diferença de cada um. 
+
+Método 
+
+Código 
+
+Significado 
+
+Quando usar 
+
+Ok() 
+
+200 
+
+Requisição bem-sucedida 
+
+Quando tudo deu certo 
+
+BadRequest() 
+
+400 
+
+Erro na requisição do cliente 
+
+Dados inválidos ou faltando 
+
+NotFound() 
+
+404 
+
+Recurso não encontrado 
+
+Quando um item procurado não existe 
+
+Created() 
+
+201 
+
+Recurso criado com sucesso 
+
+Após um cadastro 
+
+Unauthorized() 
+
+401 
+
+Requisição sem autenticação válida 
+
+Usuário não logado 
+
+Forbidden() 
+
+403 
+
+Recurso proibido mesmo autenticado 
+
+Usuário sem permissão 
+
+ 
